@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+<title>Welcome to Physiotrax</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/todc-bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme/color_1.css" id="theme">
+<link href='http://fonts.googleapis.com/css?family=Roboto:300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/custom-styles.css">
+<link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<!--[if lt IE 9]>
+		<script src="js/ie/html5shiv.js"></script>
+		<script src="js/ie/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<!--<header class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="dashboard1.html">Ebro Admin</a>
+			</div>
+			<div class="pull-right">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#" class="login_toggle">Log In</a></li>
+					<li><a href="#" class="register_toggle">Sign Up</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+			</div>
+		</div>
+    </header>-->
+
+<div class="login_wrapper">
+  <div class="adminLogo alignCenter"><a href="#"><img src="images/logo.png" width="331" height="91" alt="logo"></a></div>
+  <div class="login_panel log_section smallRadius">
+  	<span class="closeIcon"></span>
+    <div class="titleBox glbCls login_head">
+      <h1 class="blockTitle glbCls"><span>Admin <em>Login</em></span></h1>
+    </div>
+    <div class="loginFiled clearfix">
+      <div class="loginFiledLt leftCls">
+        <form action="" id="login_form" onSubmit="return false;">
+          <div class="form-group"> 
+            <!--<label for="login_username">Username</label>-->
+            <input type="text" id="login_username" name="login_username" class="form-control input-lg" data-required="true" data-minlength="2" data-required-message="Please enter a valid Username" value="" placeholder="Email" >
+          </div>
+          <div class="form-group"> 
+            <!--<label for="login_password">Password</label>-->
+            <input type="password" id="login_password" name="login_password" class="form-control input-lg" data-required="true" data-minlength="6" data-minlength-message="Password should have at least 6 characters." data-required-message="Please enter a valid Password" value="" placeholder="Password">
+            <!--<label class="checkbox">
+              <input type="checkbox" name="login_remember" id="login_remember">
+              Remember me</label>--> 
+          </div>
+          <p><a href="#">Forgot password?</a><a class="form_toggle" href="#reg_form">Register</a></p>
+          <div class="login_submit">
+            <button type="button" class="btn btn-primary btn-block btn-lg otherBtn" onclick="javascript:window.location.href='dashboard.html'">Log In</button>
+          </div>
+          <!--<div class="text-center"> <small>Not registered? <a class="form_toggle" href="#reg_form"> Sign up here</a></small> </div>-->
+        </form>
+      </div>
+      <div class="loginFiledRt rightCls"><i class="lock"><img src="images/lock-icon.png" width="107" height="129" alt="lock"></i></div>
+    </div>
+  </div>
+  <div class="login_panel reg_section smallRadius" style="display:none">
+    <div class="titleBox glbCls login_head">
+      <h1 class="blockTitle glbCls"><span>Sign <em>Up</em></span></h1>
+    </div>
+    <div class="loginFiled clearfix">
+      <form action="dashboard1.html" id="register_form">
+        <div class="form-group"> 
+          <!--<label for="register_username">Username</label>-->
+          <input type="text" id="register_username" name="register_username" class="form-control input-lg" value="" placeholder="Username" >
+        </div>
+        <div class="form-group"> 
+          <!--<label for="register_password">Password</label>-->
+          <input type="password" id="register_password" name="register_password" class="form-control input-lg" value="" placeholder="Password">
+        </div>
+        <div class="form-group"> 
+          <!--<label for="register_email">Email</label>-->
+          <input type="password" id="register_email" name="register_email" class="form-control input-lg" value="" placeholder="Email">
+        </div>
+        <div class="login_submit">
+          <button class="btn btn-primary btn-block btn-lg otherBtn">Sign Up</button>
+        </div>
+        <div class="text-center"> <small>Never mind, <a class="form_toggle" href="#login_form">send me back to the sign-in screen</a></small> </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script> 
+<!-- jquery cookie --> 
+<script src="js/jquery_cookie.min.js"></script> 
+<script src="js/lib/parsley/parsley.min.js"></script> 
+<script>
+		$(function() {
+			
+			//* validation
+			$('#login_form').parsley({
+				errors: {
+					classHandler: function ( elem, isRadioOrCheckbox ) {
+						if(isRadioOrCheckbox) {
+							return $(elem).closest('.form_sep');
+						}
+					},
+					container: function (element, isRadioOrCheckbox) {
+						if(isRadioOrCheckbox) {
+							return element.closest('.form_sep');
+						}
+					}
+				}
+			});
+			
+			//* change form
+			$('.form_toggle').on('click',function(e){
+				$('.login_panel').slideToggle(function() {
+					if($('.log_section').is(':visible')) {
+						$('.login_toggle').closest('li').addClass('active').siblings('li').removeClass('active');
+					} else {
+						$('.register_toggle').closest('li').addClass('active').siblings('li').removeClass('active');
+					}
+				});
+				e.preventDefault();
+			});
+			
+			$('.login_toggle').on('click',function(e){
+				if($('.log_section').is(':hidden')) {
+					$('.reg_section').slideUp();
+					$('.log_section').slideDown();
+					$(this).closest('li').addClass('active').siblings('li').removeClass('active');
+				}
+				e.preventDefault();
+			});
+			$('.register_toggle').on('click',function(e){
+				if($('.reg_section').is(':hidden')) {
+					$('.log_section').slideUp();
+					$('.reg_section').slideDown();
+					$(this).closest('li').addClass('active').siblings('li').removeClass('active');
+				}
+				e.preventDefault();
+			});
+			
+			// set theme from cookie
+			if($.cookie('ebro_color') != undefined) {
+				$('#theme').attr('href','css/theme/'+$.cookie('ebro_color')+'.css');
+			}
+			
+		});
+	</script>
+</body>
+</html>

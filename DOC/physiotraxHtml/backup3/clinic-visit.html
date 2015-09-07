@@ -1,0 +1,192 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Physiotrax</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes"/>
+<link href="css/patient-style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/custom-script.js"></script>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<!--<script src="http://code.jquery.com/jquery-1.10.2.js"></script>-->
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+
+	$(function() {
+
+		$( "#slider-range, #slider-range2, #slider-range3, #slider-range4, #slider-range5" ).slider();
+
+		$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+
+			" - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
+	});
+
+</script>
+</head>
+
+<body>
+<div class="page glbCls">
+  <header class="header glbCls">
+    <div class="mainWrap glbCls clearfix">
+      <div class="logo leftCls"><a href="index.html"><img src="images/logo.png" width="331" height="91" alt="logo"></a></div>
+      <div class="heaerRight rightCls">
+        <div class="headerBlock glbCls alignRight"><a class="patientLogout" href="#">Patient Logout</a> <a class="orangeBtn" href="#">Provider Login</a> </div>
+        <div class="headerBlock glbCls last">
+          <nav class="navigation">
+            <ul class="clearfix nav-collapse">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="#">Foundation</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Price</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Providers</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="main glbCls">
+    <section class="mainBlock glbCls howItPan">
+      <div class="mainWrap glbCls clearfix">
+        <div class="titleBox glbCls noneBg">
+          <h4 class="blockTitle glbCls"><span>Clinic <em>Visit</em></span></h4>
+        </div>
+        <div class="transparentBox glbCls smallRadius"> <span class="bgRec smallRadius"></span>
+          <div class="transBoxIn glbCls">
+            <div class="cVTopBlockPan">
+              <div class="cVTopBlockLeft">
+                <div class="cVTopBlockLeftImg"><img src="images/john-smith.jpg" alt=""></div>
+              </div>
+              <div class="cVTopBlockMid">
+                <h3>John Smith</h3>
+                <p><strong>Diagnosis</strong>: Knee Injury</p>
+              </div>
+              <div class="cVTopBlockRight">
+                <h4>Clinician Instructions: </h4>
+                <p>Use the sliders below to perform subjective and objective measurements of the patient's progress.</p>
+              </div>
+              <br class="spacer">
+            </div>
+          </div>
+        </div>
+        <div class="transparentBox glbCls smallRadius topGap"> <span class="bgRec smallRadius"></span>
+          <div class="transBoxIn glbCls">
+            <div class="patientRecordPan3">
+              <div class="patientRecord3Inn">
+                <div class="cvSlider">
+                  <h5>Pain</h5>
+                  <div id="slider-range"></div>
+                  <div class="slideRangePan">
+                    <div class="slideRangeBox">1</div>
+                    <div class="slideRangeBox">2</div>
+                    <div class="slideRangeBox">3</div>
+                    <div class="slideRangeBox">4</div>
+                    <div class="slideRangeBox">5</div>
+                    <div class="slideRangeBox">6</div>
+                    <div class="slideRangeBox">7</div>
+                    <div class="slideRangeBox">8</div>
+                    <div class="slideRangeBox">9</div>
+                    <div class="slideRangeBox">10</div>
+                  </div>
+                </div>
+                <div class="cvSlider">
+                  <h5>Level of difficulty</h5>
+                  <div id="slider-range2"></div>
+                  <div class="slideRangePan">
+                    <div class="slideRangeBox">1</div>
+                    <div class="slideRangeBox">2</div>
+                    <div class="slideRangeBox">3</div>
+                    <div class="slideRangeBox">4</div>
+                    <div class="slideRangeBox">5</div>
+                    <div class="slideRangeBox">6</div>
+                    <div class="slideRangeBox">7</div>
+                    <div class="slideRangeBox">8</div>
+                    <div class="slideRangeBox">9</div>
+                    <div class="slideRangeBox">10</div>
+                  </div>
+                </div>
+                <div class="cvSlider">
+                  <h5>Gross Strength</h5>
+                  <div id="slider-range3"></div>
+                  <div class="slideRangePan">
+                    <div class="slideRangeBox">10%</div>
+                    <div class="slideRangeBox">20%</div>
+                    <div class="slideRangeBox">30%</div>
+                    <div class="slideRangeBox">40%</div>
+                    <div class="slideRangeBox">50%</div>
+                    <div class="slideRangeBox">60%</div>
+                    <div class="slideRangeBox">70%</div>
+                    <div class="slideRangeBox">80%</div>
+                    <div class="slideRangeBox">90%</div>
+                    <div class="slideRangeBox">100%</div>
+                  </div>
+                </div>
+                <div class="cvSlider">
+                  <h5>Gross Range of Motion</h5>
+                  <div id="slider-range4"></div>
+                  <div class="slideRangePan">
+                    <div class="slideRangeBox">10%</div>
+                    <div class="slideRangeBox">20%</div>
+                    <div class="slideRangeBox">30%</div>
+                    <div class="slideRangeBox">40%</div>
+                    <div class="slideRangeBox">50%</div>
+                    <div class="slideRangeBox">60%</div>
+                    <div class="slideRangeBox">70%</div>
+                    <div class="slideRangeBox">80%</div>
+                    <div class="slideRangeBox">90%</div>
+                    <div class="slideRangeBox">100%</div>
+                  </div>
+                </div>
+                <div class="cvSlider">
+                  <h5>Outcome Measurement</h5>
+                  <div id="slider-range5"></div>
+                  <div class="slideRangePan">
+                    <div class="slideRangeBox">1</div>
+                    <div class="slideRangeBox">2</div>
+                    <div class="slideRangeBox">3</div>
+                    <div class="slideRangeBox">4</div>
+                    <div class="slideRangeBox">5</div>
+                    <div class="slideRangeBox">6</div>
+                    <div class="slideRangeBox">7</div>
+                    <div class="slideRangeBox">8</div>
+                    <div class="slideRangeBox">9</div>
+                    <div class="slideRangeBox">10</div>
+                  </div>
+                </div>
+                <h4>CLINICIAN NOTES</h4>
+                <ul>
+                  <li>04-16-15</li>
+                </ul>
+                <p class="whiteBorder">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <ul>
+                  <li>04-16-15</li>
+                </ul>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <div class="replyForm">
+                  <form name="" id="" action="#" >
+                    <input type="text" value="Date" class="textInput">
+                    <textarea>Enter your note to patient</textarea>
+					<br class="spacer">
+					<input type="checkbox" value="" name=""> <label>Don't report this to the patient</label>
+					<br class="spacer">
+                    <input type="button" value="Submit" class="replyBtn">
+                  </form>
+                </div>
+                <br class="spacer">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer glbCls">
+    <div class="copyrightSec glbCls alignCenter">
+      <div class="mainWrap glbCls clearfix"> ©2015 <a href="#">Physiotrax.com</a> All Rights Reserved </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

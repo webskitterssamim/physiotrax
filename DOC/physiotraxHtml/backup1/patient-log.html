@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Physiotrax</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes"/>
+<link href="css/patient-style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/custom-script.js"></script>
+
+<link rel="stylesheet" href="css/jquery-ui.css">
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+	$(function() {
+		$( "#slider-range, #slider-range2, #slider-range3, #slider-range4, #slider-range5" ).slider({
+			range: true,
+			min: 0,
+			max: 500,
+			values: [ 75, 300 ],
+			slide: function( event, ui ) {
+				$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+			}
+		});
+		$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+			" - $" + $( "#slider-range" ).slider( "values", 1 ) );
+	});
+</script>
+
+</head>
+
+<body>
+<div class="page glbCls">
+  <header class="header glbCls">
+    <div class="mainWrap glbCls clearfix">
+      <div class="logo leftCls"><a href="#"><img src="images/logo.png" width="331" height="91" alt="logo"></a></div>
+      <div class="heaerRight rightCls">
+        <div class="headerBlock glbCls alignRight"><a class="patientLogout" href="#">Patient Logout</a> <a class="orangeBtn" href="#">Provider Login</a> </div>
+        <div class="headerBlock glbCls last">
+          <nav class="navigation">
+            <ul class="clearfix">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Foundation</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Price</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Providers</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="main glbCls">
+    <section class="mainBlock glbCls howItPan">
+      <div class="mainWrap glbCls clearfix">
+        <div class="titleBox glbCls noneBg">
+          <h4 class="blockTitle glbCls"><span>Patient <em>Log</em></span></h4>
+        </div>
+        <div class="transparentBox glbCls smallRadius"> <span class="bgRec smallRadius"></span>
+          <div class="transBoxIn glbCls">
+            <div class="patientLogPan">
+            <h3>Congratulations for completing your exercises!</h3>
+			<p>Log your overall pain and exertion for today's exercises below:</p>
+			</div>
+            
+            
+          </div>
+        </div>
+		
+		
+        
+		
+		
+        <div class="transparentBox glbCls smallRadius topGap"> 
+		  <span class="bgRec smallRadius"></span>
+          <div class="transBoxIn glbCls">
+		  	<div class="patientRecordPan3">
+			<div class="patientRecord3Inn">
+				<div class="plCalenderBox">
+					<span class="calIcon"></span>
+					<input type="" value="06-16-2015">
+				</div>
+				<div class="cvSlider">
+				<h5>Pain</h5>
+				<div id="slider-range"></div>
+				<div class="slideRangePan">
+					<div class="slideRangeBox">1</div>
+					<div class="slideRangeBox">2</div>
+					<div class="slideRangeBox">3</div>
+					<div class="slideRangeBox">4</div>
+					<div class="slideRangeBox">5</div>
+					<div class="slideRangeBox">6</div>
+					<div class="slideRangeBox">7</div>
+					<div class="slideRangeBox">8</div>
+					<div class="slideRangeBox">9</div>
+					<div class="slideRangeBox">10</div>
+				</div>
+				</div>
+				<div class="cvSlider">
+				<h5>LEVEL OF DIFFICULTY</h5>
+				<div id="slider-range2"></div>
+				<div class="slideRangePan">
+					<div class="slideRangeBox">1</div>
+					<div class="slideRangeBox">2</div>
+					<div class="slideRangeBox">3</div>
+					<div class="slideRangeBox">4</div>
+					<div class="slideRangeBox">5</div>
+					<div class="slideRangeBox">6</div>
+					<div class="slideRangeBox">7</div>
+					<div class="slideRangeBox">8</div>
+					<div class="slideRangeBox">9</div>
+					<div class="slideRangeBox">10</div>
+				</div>
+				</div>
+				<div class="replyForm">				
+				<form name="" id="" action="#" >
+					<label>Comments to Therapist</label>
+					<textarea></textarea>
+					<input type="button" value="Submit" class="replyBtn">
+				</form>
+				</div>	
+				<div class="selectAllBox">
+					<select class="filedDivOne selectBox">
+						<option>Select ALL</option>
+					</select>
+				</div>
+				<div class="plImageBlock">
+					<ul>
+						<li><img src="images/pl-img-1.jpg" alt=""> <input type="checkbox" value=""></li>
+						<li><img src="images/pl-img-2.jpg" alt=""> <input type="checkbox" value=""></li>
+						<li><img src="images/pl-img-3.jpg" alt=""> <input type="checkbox" value=""></li>
+						<li><img src="images/pl-img-4.jpg" alt=""> <input type="checkbox" value=""></li>
+						<li><img src="images/pl-img-5.jpg" alt=""> <input type="checkbox" value=""></li>
+					</ul>
+				</div>		
+				<br class="spacer">
+			</div>	
+			</div>
+		  </div>
+		</div>
+		
+		
+      </div>
+    </section>
+  </div>
+  <footer class="footer glbCls">
+    
+    <div class="copyrightSec glbCls alignCenter">
+      <div class="mainWrap glbCls clearfix"> ©2015 <a href="#">Physiotrax.com</a> All Rights Reserved </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

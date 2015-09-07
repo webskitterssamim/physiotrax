@@ -1,0 +1,173 @@
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 300; src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/opensans-light.woff2) format('woff2'), url(../fonts/opensans-light.woff) format('woff'); }
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: local('Open Sans'), local('OpenSans'), url(../fonts/opensans-regular.woff2) format('woff2'), url(../fonts/opensans-regular.woff) format('woff'); }
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 600; src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/opensans-semibold.woff2) format('woff2'), url(../fonts/opensans-semibold.woff) format('woff'); }
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 700; src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/opensans-bold.woff2) format('woff2'), url(../fonts/opensans-bold.woff) format('woff'); }
+@font-face { font-family: 'Oswald'; font-style: normal; font-weight: 300; src: local('Oswald Light'), local('Oswald-Light'), url(../fonts/Oswald-Light.woff2) format('woff2'), url(../fonts/Oswald-Light.woff) format('woff'); }
+@font-face { font-family: 'Oswald'; font-style: normal; font-weight: 400; src: local('Oswald Regular'), local('Oswald-Regular'), url(../fonts/Oswald-Regular.woff2) format('woff2'), url(../fonts/Oswald-Regular.woff) format('woff'); }
+@font-face { font-family: 'Oswald'; font-style: normal; font-weight: 700; src: local('Oswald Bold'), local('Oswald-Bold'), url(../fonts/Oswald-Bold.woff2) format('woff2'), url(../fonts/Oswald-Bold.woff) format('woff'); }
+body { padding: 40px 0 0;font-family: 'Open Sans';font-size:14px; }
+textarea, input[type="password"], input[type="text"], input[type="submit"] { -webkit-appearance: none }
+.navbar-brand { font: 300 15px/18px 'Roboto', sans-serif }
+.login_wrapper { position: relative; width: 723px; margin: 0 auto }
+.login_panel { background: #fff; padding: 40px 24px 36px; position: relative }
+.login_head { margin-bottom: 20px }
+
+
+.login_panel label a { font-size: 11px; margin-right: 4px }
+body { background: url(../images/patient-bg.jpg) no-repeat 0 0; background-attachment: fixed; -webkit-background-attachment: fixed; -moz-background-attachment: fixed; -o-background-attachment: fixed; -ms-background-attachment: fixed; background-size: 100% 100%; -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%; -o-background-size: 100% 100%; -ms-background-size: 100% 100%; }
+.clearfix:after { content: " "; visibility: hidden; display: block; height: 0; clear: both }
+.glbCls { clear: both; display: block; }
+.leftCls { float: left; }
+.rightCls { float: right; }
+.alignLeft { text-align: left; }
+.alignRight { text-align: right; }
+.alignCenter { text-align: center; }
+.divCenter { margin: 0 auto; display: block; }
+.smallRadius { border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px; }
+.adminLogo { padding-bottom: 66px; }
+.titleBox { background: url(../images/grident-bg.png) repeat 0 0; text-align: center; margin: 0 0 44px 0; }
+.titleBox.noneBg { background: none; }
+.titleBox .blockTitle { font-size: 39px; line-height: 39px; font-family: 'Oswald'; color: #000000; text-transform: uppercase;font-weight:700;margin:0; }
+.titleBox.noneBg .blockTitle { color: #fff; }
+.titleBox .blockTitle span {background:#fff; display: inline-block; vertical-align: top; padding: 0 30px; position: relative; }
+
+.titleBox.noneBg .blockTitle span { background: none; }
+.titleBox .blockTitle span em { color: #fe7110; font-style: normal; }
+.loginFiled .loginFiledLt{
+	width:60%;
+}
+.loginFiled .loginFiledRt{
+	width:40%;
+	text-align:center;
+}
+.loginFiled .input-lg{
+	height:66px;
+	padding:0 10px;
+	border:0;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	-o-border-radius:4px;
+	-ms-border-radius:4px;
+	background:#c8c8c8;
+	font-size:23px;
+	line-height:normal;
+	font-family: 'Oswald';
+	color:#171717;
+}
+.loginFiled .loginFiledLt p a{
+	font-size:14px;
+	line-height:14px;
+	color:#4f4e4e;
+	margin-right:10px;
+}
+.otherBtn{ height: 48px; line-height: 40px; border-radius: 30px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -o-border-radius: 30px; -ms-border-radius: 30px; background: #1b1b1b; border: 4px solid #e8e8e8; display: inline-block; vertical-align: top; padding: 0 20px; color: #fff; cursor: pointer; }
+.otherBtn:hover{ background: #fe7110;border: 4px solid #e8e8e8; }
+.closeIcon{
+	width:39px;
+	height:39px;
+	position:absolute;
+	right: -18px;
+    top: -20px;
+	background:url(../images/close-icon.png) no-repeat 0 0;
+	cursor:pointer;
+}
+.side_ico_nav li a .icon-run{
+	width:21px;
+	height:26px;
+	display:inline-block;
+	vertical-align:top;
+	background:url(../images/run-icon.png) no-repeat 0 0;
+}
+.side_ico_nav li a:hover .icon-run{
+	background-position:right 0;
+}
+.table > thead > tr > th{
+	background:#1c1c1c;
+	color:#fff;
+}
+.topLabelPadd{
+	padding-top:22px;
+}
+.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td{
+	padding:12px;
+}
+.btmButton .btn-default{
+	min-width:180px;
+	margin-right:10px;
+}
+.providerEdit .form_sep{
+	border:0;
+}
+.providerEdit textarea.form-control{
+	height:110px;	
+}
+.nameNote {
+    clear: both;
+    display: block;
+    line-height: 38px;
+    margin: 24px 0 20px;
+    min-height: 38px;
+}
+.providerEdit .radio-inline{
+	margin-bottom:8px;
+}
+.paymentTable .table thead th{
+	background:#6f6f6f;
+}
+.paymentTable .table tbody tr td{
+	background:#dfdfdf;
+	border-color:#fff;
+}
+.paymentTable .table tbody tr:nth-child(even) td{
+	background:#ececec;
+}
+.paymentTable{
+	padding-bottom:20px;
+}
+.paymentAdd h5,.paymentTable h5{
+	font-size:14px;
+	line-height:14px;
+	color:#333;
+	font-weight:bold;
+	margin-bottom:16px;
+}
+.btmButton.orangeBtn .btn-default{
+	background:#fe7110;
+	border-color:#d1d1d1;
+	text-transform:capitalize;
+}
+.topShow{
+	padding-bottom:1px;	
+}
+.paymentTable h5{
+	line-height:38px;
+}
+.paymentTable .btn-default{
+	min-width:182px;	
+}
+.videoUpBtn {
+	padding:0;
+}
+.exEditBox {
+	clear:both;
+	margin:20px 0;
+	list-style:none;
+	padding:0;
+}
+.exEditBox li {
+	float:left;
+	margin:0 10px;
+	width:20%;
+}
+.exEditBox li img {
+	display:block;
+	margin:0 0 20px;
+}
+
+
+@media (max-width: 767px) {
+body { padding-top: 40px }
+.navbar { display: none }
+.login_wrapper { width: 100%; padding: 0 20px }
+}

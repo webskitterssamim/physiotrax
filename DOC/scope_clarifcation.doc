@@ -1,0 +1,76 @@
+﻿
+
+
+Aug 28 
+
+1 - Provider Details  
+The provider is the business which is the client of our system. Here are the fields I think we need, let me know if you think we need others based on the design.
+
+Business Name
+Contact Name
+Phone Number
+Address
+City
+State
+Zip
+
+Credit Card #
+CVC
+Expiration Date
+Billing Phone Number
+Billing Address
+Billing City
+Billing State
+Billing Zip
+
+2 - Clinician Details
+
+The Clinician is the person providing the physical therapy, massage or other medical services:
+
+First Name
+Last Name
+Email Address
+Profile Photo
+Password
+Employer (links to Provider)
+Primary clinic location (links to Clinics)
+
+
+
+2.  Outreach - current or past patients - create report sets of patients, like "Men over 50 with knee problems", and be able to email newsletters to those sets of patients that are customized with information just for them.  Be able to track  unsubscribes and if they are read, similar to how mailchimp works
+
+
+
+
+
+
+
+Clinic Details (A provider (above) can have 1 or more clinics)
+
+Clinic Name
+Address
+City
+State
+Phone Number
+Contact Number
+Email Address
+
+
+
+
+
+
+
+
+Admin (our client) - has admin panel to manage the clients which are physical therapy companies, also called Providers
+
+Provider - A company with 1 or more locations and 1 or more clinicians (physical therapists, massage therapists, doctors, etc.)
+
+Clinician (sometimes also referred to as provider since he provides the actual service, but it is just a single person
+
+Patient - the person receiving the services.
+
+System goals:
+1.  Tracking - allow the patient to track his own progress, allow the clinician or provider to also track the patient's progress
+
+

@@ -1,0 +1,550 @@
+* { box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; -ms-box-sizing: border-box; padding: 0; margin: 0; }
+/***** Font Face Start ****/
+
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 300; src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/opensans-light.woff2) format('woff2'), url(../fonts/opensans-light.woff) format('woff'); }
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: local('Open Sans'), local('OpenSans'), url(../fonts/opensans-regular.woff2) format('woff2'), url(../fonts/opensans-regular.woff) format('woff'); }
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 600; src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/opensans-semibold.woff2) format('woff2'), url(../fonts/opensans-semibold.woff) format('woff'); }
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 700; src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/opensans-bold.woff2) format('woff2'), url(../fonts/opensans-bold.woff) format('woff'); }
+@font-face { font-family: 'Oswald'; font-style: normal; font-weight: 300; src: local('Oswald Light'), local('Oswald-Light'), url(../fonts/Oswald-Light.woff2) format('woff2'), url(../fonts/Oswald-Light.woff) format('woff'); }
+@font-face { font-family: 'Oswald'; font-style: normal; font-weight: 400; src: local('Oswald Regular'), local('Oswald-Regular'), url(../fonts/Oswald-Regular.woff2) format('woff2'), url(../fonts/Oswald-Regular.woff) format('woff'); }
+@font-face { font-family: 'Oswald'; font-style: normal; font-weight: 700; src: local('Oswald Bold'), local('Oswald-Bold'), url(../fonts/Oswald-Bold.woff2) format('woff2'), url(../fonts/Oswald-Bold.woff) format('woff'); }
+/***** Font Face End ****/
+
+
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; color: #7a7a7a; font-family: 'Open Sans'; font-size: 14px; background: url(../images/patient-bg.jpg) no-repeat 0 0; background-size: cover; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+nav ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; text-decoration: none; transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; -ms-transition: all 0.5s ease 0s; }
+img { border: 0; vertical-align: top; height: auto; max-width: 100%; }
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #cccccc; margin: 1em 0; padding: 0; }
+input, select { vertical-align: middle; }
+ul, li { list-style: none; }
+.clearfix:after { content: " "; visibility: hidden; display: block; height: 0; clear: both }
+.glbCls { clear: both; display: block; }
+.leftCls { float: left; }
+.rightCls { float: right; }
+.alignLeft { text-align: left; }
+.alignRight { text-align: right; }
+.alignCenter { text-align: center; }
+.divCenter { margin: 0 auto; display: block; }
+.mainWrap { max-width: 1000px; margin: 0 auto; }
+.spriteImg { background: url(../images/sprite-img.png) no-repeat 0 0; }
+.fullRadius { border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; -ms-border-radius: 50%; }
+.smallRadius { border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px; }
+.owl-carousel .owl-wrapper:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.owl-carousel { display: none; position: relative; width: 100%; -ms-touch-action: pan-y; }
+.owl-carousel .owl-wrapper { display: none; position: relative; -webkit-transform: translate3d(0px, 0px, 0px); }
+.owl-carousel .owl-wrapper-outer { overflow: hidden; position: relative; width: 100%; }
+.owl-carousel .owl-wrapper-outer.autoHeight { -webkit-transition: height 500ms ease-in-out; -moz-transition: height 500ms ease-in-out; -ms-transition: height 500ms ease-in-out; -o-transition: height 500ms ease-in-out; transition: height 500ms ease-in-out; }
+.owl-carousel .owl-item { float: left; }
+.owl-controls .owl-page, .owl-controls .owl-buttons div { cursor: pointer; }
+.owl-controls { -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+.owl-carousel .owl-wrapper, .owl-carousel .owl-item { -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); }
+.header { border-top: 4px solid #f6bf00; background: #181818; box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6); -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6); -o-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6); -ms-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6); }
+.logo { line-height: 210px; }
+.logo a { display: block; height: 100%; }
+.logo img { vertical-align: middle; }
+.heaerRight { padding-top: 48px; }
+.headerBlock { padding-bottom: 46px; }
+.headerBlockl.last { padding: 0; }
+.navigation ul li { float: left; margin-left: 22px; }
+.navigation ul li a { font-weight: 300; text-transform: uppercase; color: #ffffff; display: inline-block; vertical-align: top; position: relative; padding: 0 0 8px 0; font-family: 'Open Sans'; border-bottom: 4px solid transparent; }
+.navigation ul li:hover a, .navigation ul li.active a { border-bottom: 4px solid #fa8506; }
+.orangeBtn { display: inline-block; vertical-align: top; padding: 10px 16px; font-size: 14px; line-height: 14px; color: #fff; background: #fe7110; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px; text-transform: uppercase; }
+.orangeBtn:hover { background: #d25c0b; }
+.patientLogout { display: inline-block; vertical-align: top; padding: 10px 16px; font-size: 14px; line-height: 14px; color: #fff; background: #000000; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px; text-transform: uppercase; margin-right: 6px; }
+.patientLogout:hover { background: #d25c0b; }
+.mainBlock { padding: 40px 0; position: relative; z-index: 2; }
+.otherBtn { height: 48px; line-height: 40px; border-radius: 30px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -o-border-radius: 30px; -ms-border-radius: 30px; background: #1b1b1b; border: 4px solid #e8e8e8; display: inline-block; vertical-align: top; padding: 0 20px; color: #fff; cursor: pointer; }
+.otherBtn:hover, .howItBox:hover .otherBtn { background: #0931ae; }
+.titleBox { background: url(../images/grident-bg.png) repeat 0 0; text-align: center; margin: 0 0 44px 0; }
+.titleBox.noneBg { background: none; }
+.titleBox .blockTitle { font-size: 39px; line-height: 39px; font-family: 'Oswald'; color: #000000; text-transform: uppercase; }
+.titleBox.noneBg .blockTitle { color: #fff; }
+.titleBox .blockTitle span { display: inline-block; background: #fff; vertical-align: top; padding: 0 6px; position: relative; }
+.titleBox .blockTitle span:before, .titleBox .blockTitle span:after { content: ""; width: 80px; height: 100%; position: absolute; top: 0; left: -80px; background: url(../images/grident-bg.png) repeat 0 0; }
+.titleBox .blockTitle span:after { left: auto; right: -80px; }
+.titleBox.noneBg .blockTitle span { background: none; }
+.titleBox .blockTitle span em { color: #fe7110; font-style: normal; }
+.transparentBox { padding: 32px 22px; background: rgba(255,255,255,0.23); position: relative; }
+.transparentBox .bgRec { position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; }
+.transparentBox .bgRec:after { background: rgba(255, 255, 255, 0.08); content: ""; height: 256px; left: -162px; position: absolute; top: -138px; width: 1200px; transform: rotate(-12deg); -webkit-transform: rotate(-12deg); -moz-transform: rotate(-12deg); -o-transform: rotate(-12deg); -ms-transform: rotate(-12deg); }
+.transBoxIn { position: relative; z-index: 1; }
+.exercisePanel h4 { font-size: 28px; line-height: 28px; color: #1c1c1c; font-weight: 700; margin: 0 0 24px 0; text-transform: uppercase; }
+.exerciseContent { display: table; clear: both; vertical-align: top; }
+.exercisePanel .exerciseLeft { width: 46%; display: table-cell; vertical-align: top; padding-right: 20px; }
+.exercisePanel .exerciseRight { background: rgba(255, 255, 255, 0.08); width: 54%; display: table-cell; vertical-align: top; }
+.listDiv { display: inline-block; vertical-align: top; clear: both; width: 100%; border-bottom: 1px solid #b2b9ca; padding: 0 22px; line-height: 46px; font-size: 13px; font-weight: 700; }
+.listDiv .listDivLt { width: 70%; text-transform: uppercase; color: #1c1c1c; }
+.exercisePanel { padding-bottom: 20px; }
+.listDiv .listDivRt { width: 30%; color: #fff; }
+.aboutPan { position: relative; min-height: 90px; }
+.aboutPan .aboutImg { width: 88px; height: 88px; position: absolute; left: 0; top: 0; margin: 0; overflow: hidden; border: 4px solid #a8adba; }
+.aboutPan .aboutImg span { width: 230px; position: absolute; left: 50%; margin: 0 0 0 -115px; text-align: center; height: 100%; }
+.aboutPan .aboutImg span img { height: 100%; }
+.aboutPan .aboutContent { padding-left: 102px; padding-top: 5px; }
+.aboutPan .aboutContent p, .descriptionPan p { line-height: 21px; color: #ffffff; line-height: 22px; font-size: 15px; }
+.aboutPan .aboutContent p a { text-decoration: underline; color: #fe7110; }
+.descriptionPan h5, .noteDiv h5 { clear: both; display: block; font-size: 20px; line-height: 20px; color: #1c1c1c; text-transform: uppercase; padding-bottom: 16px; }
+.descriptionPan { padding-bottom: 20px; }
+.nextExp .otherBtn { border-color: #424041; padding: 0 40px; }
+.extraTransBox { background: rgba(255, 255, 255, 0.18); border: 1px solid rgba(255, 255, 255, 0.43); padding: 14px; }
+.extraTransBox h4 { font-size: 24px; line-height: 24px; padding-bottom: 22px; color: #1c1c1c; }
+.searchListTr, .searchListTd { border: 1px solid rgba(255, 255, 255, 0.43); padding: 18px 0; background: rgba(255, 255, 255, 0.18); font-size: 16px; line-height: 16px; color: #232323; font-weight: bold; display: table; margin: 0 0 10px; vertical-align: top; width: 100%; }
+.searchListTd { padding: 0; }
+.searchListTr div, .searchListTd div { display: table-cell; min-height: 1px; vertical-align: top; padding: 0 8px; }
+.searchListTd div { border-right: 1px solid rgba(255, 255, 255, 0.43); padding: 20px 8px 8px; }
+.searchListTr div.tr1, .searchListTd div.tdBox1 { width: 149px; }
+.searchListTr div.tr2, .searchListTd div.tdBox2 { width: 109px; }
+.searchListTr div.tr3, .searchListTd div.tdBox3 { width: 121px; }
+.searchListTr div.tr4, .searchListTd div.tdBox4 { width: 172px; }
+.searchListTr div.tr5, .searchListTd div.tdBox5 { width: 242px; }
+.searchListTr div.tr6, .searchListTd div.tdBox6 { width: 132px; }
+.searchListTd div { font-size: 14px; line-height: 18px; color: #232323; font-weight: 400; }
+.searchListTd div.tdBox1 { padding-top: 8px; border: 0; }
+.searchListTd div.tdBox6 { border: 0; }
+.searchListTd div.tdBox1 img { border: 1px solid rgba(255, 255, 255, 0.43); }
+.extraTransBox .otherBtn { border-color: #676768; padding: 0 40px; font-size: 14px; margin-left: 20px; }
+.searchTopBox { display: inline-block; vertical-align: top; }
+.searchTopBox.one { min-width: 250px; margin-right: 20px; }
+.searchTop { padding-bottom: 20px; }
+.filedDiv label { clear: both; display: block; font-size: 13px; line-height: 13px; color: #000; padding-bottom: 20px; text-transform: uppercase; font-weight: 700; }
+.ddcommon { clear: both; display: block; position: relative; height: 48px; background: rgba(255, 255, 255, 0.28); border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px; line-height: 48px; font-size: 14px; color: #111111; padding: 0; width: 100%; }
+.ddcommon.borderRadiusTp { border-bottom-left-radius: 0; border-bottom-right-radius: 0; background: rgba(255, 255, 255, 0.7); }
+.ddcommon .ddChild { width: 100%; background: rgba(255, 255, 255, 0.7); }
+.ddcommon .ddChild ul li { clear: both; display: block; padding: 10px; font-size: 12px; line-height: 12px; color: #111111; cursor: pointer; }
+.ddcommon .ddChild ul li:hover { background: #111111; color: #fff; }
+.ddcommon .ddTitleText { cursor: pointer; display: block; padding: 0 18px; }
+.ddArrow { position: absolute; right: 24px; top: 50%; margin: -2px 0 0 0; width: 0; height: 0; border-right: 5px solid transparent; border-left: 5px solid transparent; border-top: 5px solid #000000; }
+.borderRadiusBtm .ddArrow { border-top: 5px solid transparent; border-bottom: 5px solid #000000; margin: -8px 0 0 0; }
+.filedDivOne { width: 48%; }
+.filedDivTwo { width: 30%; padding: 0 22px; }
+.filedDivThree { width: 22%; }
+.selectBox { width: 100%; }
+.intBox, .txtBox { height: 48px; background: rgba(255, 255, 255, 0.28); border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px; line-height: 48px; font-size: 14px; color: #111111; padding: 0 18px; width: 100%; border: 0; }
+.txtBox { height: 100px; padding: 10px 18px; line-height: normal; font-family: 'Open Sans'; }
+.filedDiv { padding-bottom: 22px; }
+.filedDivTwo .otherBtn { margin-top: 33px; }
+.filterList { max-height: 350px; overflow-y: auto; margin: 30px 0; }
+.filterList ul { margin: 0; }
+.filterList ul li { float: left; margin: 0 22px 20px; }
+.filterList ul li:first-child { margin-left: 0; }
+.filterList ul li:last-child { margin-right: 0; }
+.biglabel { font-size: 15px; line-height: 21px; color: #000; font-weight: 700; padding-bottom: 20px; text-transform: uppercase; }
+.filterDiv .inputFiled { position: relative; }
+.filterDiv .inputFiled.one { width: 33%; }
+.filterDiv .inputFiled label { color: #000; font-weight: 700; font-size: 12px; line-height: 48px; }
+.filterDiv .inputFiled label { display: inline-block; vertical-align: top; clear: none; margin-right: 6px; }
+.filterDiv .inputFiled .intBoxDiv { display: inline-block; vertical-align: top; clear: none; }
+.filterDiv .inputFiled.one .intBoxDiv, .filterDiv .inputFiled.two .intBoxDiv { position: relative; padding-right: 56px }
+.filterDiv .inputFiled.one .intBoxDiv input { width: 134px; }
+.filterDiv .inputFiled.two .intBoxDiv { width: 56%; }
+.filterDiv .inputFiled.two { width: 48%; }
+.filterDiv .inputFiled.three { width: 19%; }
+.filterDiv .inputFiled .or { font-size: 16px; line-height: 38px; text-transform: uppercase; font-weight: bold; width: 56px; color: #000; position: absolute; right: 0; top: 0; text-align: center; }
+.filterDiv .inputFiled .searchIcon { border: 0; width: 19px; height: 19px; display: inline-block; position: absolute; right: 10px; top: 14px; background-position: 0 -614px; margin: 0; cursor: pointer; }
+.intBoxDiv .searchBtn { width: 19px; height: 100%; position: absolute; right: 0; top: 0; border: 0; background: transparent; text-indent: -9999em; display: inline-block; cursor: pointer; }
+.filterDiv .inputFiled.others, .filterDiv .inputFiled.textarepan { margin-bottom: 32px; }
+.filterDiv .inputFiled.others .intBoxDiv { width: 26%; position: relative; }
+.filterDiv .inputFiled.textarepan .intBoxDiv { width: 100%; }
+.filterDiv .inputFiled.textarepan .intBoxDiv .txtBox { width: 37.5%; background: rgba(255, 255, 255, 0.7); height: 164px; line-height: 24px; }
+.profileBox { background: rgba(255,255,255,0.23); padding: 32px 58px; }
+.profileBox .profileName { font-size: 19px; line-height: 19px; color: #1c1c1c; margin-bottom: 16px; }
+.profileImg { width: 178px; height: 178px; position: relative; text-align: center; overflow: hidden; border: 8px solid rgba(0,0,0,0.08); margin-bottom: 15px; }
+.profileImg span { width: 230px; position: absolute; left: 50%; top: 0; margin: 0 0 0 -115px; height: 100%; }
+.profileImg span img { height: 100%; }
+.profileBox .otherBtn { width: 100%; height: 46px; line-height: 38px; border-color: #566b83; }
+.dashPanTopLt { width: 30%; }
+.dashPanTopRt { width: 70%; padding-left: 20px; }
+.dashCount { padding-bottom: 20px; }
+.dashCount ul li { display: inline-block; vertical-align: top; margin: 0 0 0 28px;  font-size:;
+line-height: 22px; color: #fff; position: relative; }
+.dashCount ul li i { width: 24px; height: 22px; display: inline-block; vertical-align: top; margin: 0 8px 0 0; }
+.countIcon1 { background-position: 0 -665px; }
+.countIcon2 { background-position: 0 -713px; }
+.countIcon3 { background-position: 0 -752px; }
+.dashCount ul li .msgCount { display: inline-block; min-height: 21px; min-width: 21px; text-align: center; line-height: 16px; vertical-align: top; background: #fa8506; color: #181818; font-size: 13px; border: 2px solid #516589; position: absolute; right: 0; top: -6px; }
+.dashCount ul li .countIcon3 { margin: 0 14px 0 0; }
+.doctorSel .doctorSelBox { display: inline-block; vertical-align: top; width: 40%; text-align: left; }
+.doctorSel { padding-bottom: 30px; }
+.doctorSel label { font-size: 19px; line-height: 48px; color: #fff; text-transform: uppercase; display: inline-block; vertical-align: top; margin-right: 10px; font-weight: 700; }
+.breadCampPanel ul li { float: left; width: 25%; text-align: center; }
+.breadCampPanel h4, .userChart h4 { font-weight: 700; font-size: 19px; line-height: 19px; color: #1c1c1c; padding-bottom: 40px; }
+.userChart h4 { text-transform: none; padding-top: 20px; }
+.breadCampLsit li .brdTp { height: 94px; opacity: 0.35; }
+.breadCampLsit li.active .brdTp { opacity: 1; }
+.breadCampLsit li .brdTp .iconLt { height: 100%; width: 50%; float: left; }
+.breadCampLsit li .brdTp .iconRt { height: 100%; width: 50%; float: right; }
+.breadCampLsit li .brdTp .iconRt { background-position: -670px -452px; }
+.breadCampLsit li .brdTp.icon1 .iconLt { background-position: -694px 10px; }
+.breadCampLsit li .brdTp.icon2 .iconLt { background-position: -680px -106px; }
+.breadCampLsit li .brdTp.icon3 .iconLt { background-position: -686px -220px; }
+.breadCampLsit li .brdTp.icon4 .iconLt { background-position: -686px -332px; }
+.breadCampLsit li .brdBtm { line-height: 36px; font-weight: 600; color: #1c1c1c; }
+.breadCampLsit li:last-child .brdBtm { line-height: 20px; }
+.breadCampPanel.transparentBox .bgRec:after { left: -172px; top: -172px; transform: rotate(-20deg); -webkit-transform: rotate(-20deg); -moz-transform: rotate(-20deg); -o-transform: rotate(-20deg); -ms-transform: rotate(-20deg); }
+.breadCampPanel.transparentBox { padding: 12px 22px; }
+.dashPanTop, .dashPanMid { margin-bottom: 20px; }
+.userChartSel { position: absolute; right: 22px; top: 20px; width: 20%; }
+.userChartSel label { font-weight: 700; color: #1c1c1c; text-transform: uppercase; margin: 0 0 8px 0; clear: both; display: block; }
+.userChart { padding-bottom: 20px; }
+.logTop { padding-bottom: 14px; }
+.logTop h5 { font-size: 18px; line-height: 48px; color: #1c1c1c; }
+.searchListTd div { vertical-align: middle; padding: 10px; }
+.searchListTd div.tdBox1 { width: 13.8%; }
+.searchListTd div.tdBox2 { width: 16.8%; font-size: 18px; line-height: 18px; color: #1c1c1c; font-weight: 700; }
+.searchListTd div.tdBox3 { width: 70%; border: 0; font-size: 18px; line-height: 18px; color: #fff; }
+.viewLink { padding: 20px 0 0 0; }
+.viewLink a { font-size: 15px; line-height: 15px; color: #ffffff; }
+/**** Footer ****/
+
+.footer { position: relative; z-index: 2; }
+.copyrightSec { color: #bebebe; background: rgba(0,0,0,0.48); border-top: 1px solid rgba(255,255,255,0.12); min-height: 56px; line-height: 56px; }
+.copyrightSec a { color: #bebebe; }
+.footerTop { padding-bottom: 46px; }
+.fbox { width: 33.33%; float: left; }
+.fbox .ftitle { font-size: 29px; line-height: 29px; color: #fff; font-weight: 700; font-family: 'Oswald'; text-transform: uppercase; margin: 0 0 30px 0; }
+.fbox ul li { clear: both; display: block; padding: 0 0 0 0; font-size: 16px; line-height: 36px; color: #b0b0b0; }
+.fbox ul li a { color: #b0b0b0; display: inline-block; vertical-align: top; }
+.fbox ul li a:hover { color: #fe7110; }
+.fbox .socialBox ul li { line-height: 58px; margin-bottom: 24px; }
+.fbox .socialBox ul li i { width: 60px; height: 58px; text-align: center; line-height: 54px; background: url(../images/sprite-img.png) no-repeat 0 0; vertical-align: top; margin: 0 12px 0 0; display: inline-block; vertical-align: top; }
+.fbox .socialBox ul li i.faPinterest { background-position: 0 -334px; }
+.fbox .socialBox ul li i.faFacebook { background-position: 0 -414px; }
+.fbox .socialBox ul li i.faTwitter { background-position: 0 -497px; }
+.fbox .socialBox ul li a:hover i.faPinterest { background-position: -81px -334px; }
+.fbox .socialBox ul li a:hover i.faFacebook { background-position: -81px -414px; }
+.fbox .socialBox ul li a:hover i.faTwitter { background-position: -81px -497px; }
+.subscribeForm p { margin-bottom: 9px; }
+.inputBox, .textBox { width: 100%; border: 2px solid #545454; padding: 0 15px; height: 42px; background: transparent; font-size: 16px; color: #a1a1a1; line-height: 16px; font-weight: 300; font-family: 'Open Sans'; }
+.subscribeForm .inputBox, .subscribeForm .textBox { height: 55px; }
+.subscribeForm .textBox { height: 102px; padding: 15px; }
+.submitBtn { width: 142px; border-radius: 30px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -o-border-radius: 30px; -ms-border-radius: 30px; text-align: center; height: 44px; line-height: 44px; color: #000000; font-size: 16px; text-transform: uppercase; border: 0; background: #fe7110; cursor: pointer; margin-top: 4px; }
+.spacer { font-size: 0; line-height: 0; clear: both; }
+.patientRecordPan { clear: both; }
+.patientRecordLeft { width: 30%; float: left; border-right: 1px solid #9fafc5; padding: 0 20px; }
+.pRRoundImg { clear: both; margin: 0 auto; width: 135px; height: 135px; border: 8px solid #889aae; overflow: hidden; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; }
+.pRRoundImg img { display: block; }
+.patientRecordLeft h4 { font: 300 19px/30px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; text-align: center; clear: both; padding: 10px 0; }
+.patientRecordLeft a { max-width: 172px; height: 40px; margin: 0 auto; display: block; text-decoration: none; background-color: #1c1c1c; color: #fff; text-align: center; font: 600 14px/30px "Open Sans", Arial, Helvetica, sans-serif; border: 5px solid #889aae; border-radius: 20px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; }
+.patientRecordLeft a:hover { background-color: #fff; color: #1c1c1c; }
+.patientRecordRight { width: 69%; float: left; border-Left: 1px solid #74859a; padding: 0 30px; text-align: center; }
+.patientRecordRight p { font: 300 16px/30px "Open Sans", Arial, Helvetica, sans-serif; color: #fff; padding: 0 0 60px; clear: both; text-align: left; }
+.patientRecordRight p strong { font: 700 16px/30px "Open Sans", Arial, Helvetica, sans-serif; color: #232323; }
+.patientRecordRight a { display: inline-block; width: auto; height: 60px; margin: 0 30px; padding: 0 30px; text-decoration: none; background-color: #1c1c1c; color: #fff; text-align: center; font: 700 21px/50px "Open Sans", Arial, Helvetica, sans-serif; text-transform: uppercase; border: 5px solid #889aae; border-radius: 30px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -ms-border-radius: 30px; }
+.patientRecordRight a:hover { background-color: #fff; color: #1c1c1c; }
+.topGap { margin: 20px 0 0; }
+.patientRecordPan2 { clear: both; }
+.patientRecordPan2 h3 { font: 700 18px/50px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; clear: both; width: 100%; }
+.patientRecordPan2 h3 strong { display: block; float: left; width: auto; }
+.patientRecordPan2 h3 a { width: 172px; height: 50px; margin: 0 0 20px; float: right; display: block; text-decoration: none; background-color: #1c1c1c; color: #fff; text-align: center; font: 600 14px/40px "Open Sans", Arial, Helvetica, sans-serif; border: 5px solid #889aae; border-radius: 25px; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; }
+.patientRecordPan2 h3 a:hover { background-color: #fff; color: #1c1c1c; }
+.listBlockTable { clear: both; }
+.listBlockTableRow { clear: both; overflow: hidden; width: 100%; display: table; margin: 0 0 10px; background-color: rgba(255,255,255,0.18); color: #232323; border: 1px solid #d3dae2; }
+.listBlockTable .tableTh { display: table-cell; float: left; width: auto; padding: 10px; font: 700 16px/30px "Open Sans", Arial, Helvetica, sans-serif; color: #232323; }
+.listBlockTable .tableTd { display: table-cell; float: left; width: auto; padding: 10px; font: 300 14px/30px "Open Sans", Arial, Helvetica, sans-serif; }
+.listBlockTable .percent10 { width: 10% }
+.listBlockTable .percent15 { width: 15% }
+.listBlockTable .percent20 { width: 20% }
+.listBlockTable .percent25 { width: 25% }
+.listBlockTable .percent30 { width: 30% }
+.listBlockTable .percent35 { width: 35% }
+.listBlockTable .percent40 { width: 40% }
+.listBlockTable .percent45 { width: 45% }
+.listBlockTable .percent50 { width: 50% }
+.listBlockTable .percent55 { width: 55% }
+.listBlockTable .percent60 { width: 60% }
+.listBlockTable .percent65 { width: 65% }
+.listBlockTable .percent70 { width: 70% }
+.listBlockTable .percent75 { width: 75% }
+.listBlockTable .percent80 { width: 80% }
+.listBlockTable .percent85 { width: 85% }
+.listBlockTable .percent90 { width: 90% }
+.listBlockTable .percent95 { width: 95% }
+.listBlockTable .percent100 { width: 100% }
+.setUpBtn { width: 90%; height: 40px; margin: 0 auto; float: right; display: block; text-decoration: none; background-color: #ff0000; color: #fff; text-align: center; font: 600 14px/30px "Open Sans", Arial, Helvetica, sans-serif; border: 5px solid #889aae; border-radius: 20px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; }
+.setUpBtn:hover { background-color: #fff; color: #ff0000; }
+.redText { color: #ff0000; font: 700 14px/30px "Open Sans", Arial, Helvetica, sans-serif; }
+.blackText { color: #1c1c1c; font: 700 14px/30px "Open Sans", Arial, Helvetica, sans-serif; }
+.patientRecordPan3 { clear: both; }
+.patientRecordPan3 h3 { font: 700 18px/50px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; clear: both; width: 100%; margin: 0 0 20px; }
+.patientRecordPan3 h3 strong { display: block; float: left; width: auto; }
+.patientRecordPan3 h3 a { width: 172px; height: 50px; margin: 0 20px; float: left; display: block; text-decoration: none; background-color: #1c1c1c; color: #fff; text-align: center; font: 600 14px/40px "Open Sans", Arial, Helvetica, sans-serif; border: 5px solid #889aae; border-radius: 25px; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; }
+.patientRecordPan3 h3 a:hover { background-color: #fff; color: #1c1c1c; }
+.patientRecordPan3 > ul { clear: both; width: 100%; padding: 0 0 10px; overflow: hidden; }
+.patientRecordPan3 > ul li { float: left; width: auto; padding: 0 10px; border-right: 1px solid #1c1c1c; font: 300 15px/20px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; }
+.patientRecordPan3 ul li:last-child { border-right: 0 solid #1c1c1c; }
+.patientRecordPan3 ul li a { text-decoration: none; color: #1c1c1c; }
+.patientRecordPan3 ul li a:hover { color: #fff; }
+.patientRecordPan3 p { clear: both; font: 300 13px/22px "Open Sans", Arial, Helvetica, sans-serif; color: #fff; padding: 0 0 20px; }
+.patientRecordPan3 p.whiteBorder { padding: 0 0 20px; margin: 0 0 20px; border-bottom: 1px solid #abb2bc; }
+.patientRecordPan3 h4 { clear: both; font: 700 18px/20px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; padding: 0 0 10px; }
+.replyForm { clear: both; width: 100%; }
+.replyForm input.textInput { height: 50px; width: 100%; font: 300 14px/50px "Open Sans", Arial, Helvetica, sans-serif; background-color: rgba(255,255,255,0.18); color: #1c1c1c; clear: both; padding: 0 10px; margin: 0 0 10px; border: 0; border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; }
+.replyForm textarea { height: 140px; width: 100%; padding: 0 10px; font: 300 14px/50px "Open Sans", Arial, Helvetica, sans-serif; background-color: rgba(255,255,255,0.18); color: #1c1c1c; clear: both; margin: 0 0 10px; border: 0; border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; }
+.replyForm input.replyBtn { width: 172px; height: 50px; margin: 0; float: left; display: block; cursor: pointer; text-decoration: none; background-color: #1c1c1c; color: #fff; text-align: center; font: 600 14px/30px "Open Sans", Arial, Helvetica, sans-serif; border: 5px solid #889aae; border-radius: 25px; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; }
+.replyForm input.replyBtn:hover { background-color: #fff; color: #1c1c1c; }
+.cvSlider { clear: both; border-bottom: 1px dashed #1c1c1c; padding: 10px 0; margin: 10px 0; width: 100%; }
+.cvSlider h5 { font: 700 13px/30px "Open Sans", Arial, Helvetica, sans-serif; clear: both; width: 100%; color: #1c1c1c; padding: 0 0 15px; text-transform: uppercase; }
+.cVTopBlockLeft { width: 20%; float: left; padding: 0 10px; }
+.cVTopBlockMid { width: 25%; float: left; padding: 30px 10px 0; }
+.cVTopBlockRight { width: 55%; float: left; padding: 30px 10px 0; }
+.cVTopBlockLeftImg { border: 8px solid #889aae; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; clear: both; height: 135px; margin: 0 auto; overflow: hidden; width: 135px; }
+.cVTopBlockLeftImg img { display: block; }
+.cVTopBlockMid h3 { font: 300 19px/30px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; clear: both; padding: 0 0 5px; }
+.cVTopBlockMid p { font: 300 17px/30px "Open Sans", Arial, Helvetica, sans-serif; clear: both; color: #1c1c1c; }
+.cVTopBlockMid p strong { font: 700 17px/30px "Open Sans", Arial, Helvetica, sans-serif; }
+.cVTopBlockRight h4 { font: 700 17px/30px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; clear: both; padding: 0 0 10px; }
+.cVTopBlockRight p { font: 300 13px/18px "Open Sans", Arial, Helvetica, sans-serif; clear: both; color: #fff; }
+.slideRangePan { clear: both; width: 100%; overflow: hidden; padding: 10px 0; }
+.slideRangePan .slideRangeBox { float: left; width: 10%; font: 700 13px/18px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; }
+.MembManagePan { clear: both; background-color: rgba(255,255,255,0.18); border: 1px solid #c6d1dd; padding: 20px; }
+.MembManageRow { padding: 10px; clear: both; background-color: rgba(255,255,255,0.18); border-bottom: 1px solid #c6d1dd; }
+.MembManageRow.odd { background-color: rgba(255,255,255,0.18); }
+.MembManageRow.even { background-color: rgba(255,255,255,0.30); }
+.MembManageRow ul { clear: both; width: 100%; }
+.MembManageRow ul li { clear: both; width: 100%; overflow: hidden; font: 400 14px/28px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; }
+.MembManageRow ul li strong { width: 15%; float: left; display: block; text-transform: uppercase; }
+.MembManageRow ul li span { width: 80%; float: left; display: block; }
+.cNPan { clear: both; background-color: rgba(255,255,255,0.18); border: 1px solid #c6d1dd; padding: 20px; }
+.cNPan label { display: block; float: left; width: auto; font: 700 13px/50px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; padding: 0 30px 0 0; }
+.cNPanSelect { width: 20%; float: left; }
+.ckEditorPan { clear: both; width: 100%; padding: 30px 0; }
+.ckBtn { display: inline-block; width: 172px; height: 60px; margin: 0 10px; padding: 0; text-decoration: none; background-color: #1c1c1c; color: #fff; text-align: center; font: 400 14px/50px "Open Sans", Arial, Helvetica, sans-serif; border: 5px solid #889aae; border-radius: 30px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -ms-border-radius: 30px; }
+.ckBtn:hover { background-color: #fff; color: #1c1c1c; }
+.ckBtn2 { display: inline-block; width: 172px; height: 60px; margin: 0 10px; padding: 0; text-decoration: none; background-color: #fa8506; color: #1c1c1c; text-align: center; font: 400 14px/50px "Open Sans", Arial, Helvetica, sans-serif; border: 5px solid #889aae; border-radius: 30px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -ms-border-radius: 30px; }
+.ckBtn2:hover { background-color: #1c1c1c; color: #fa8506; }
+.setupPan { clear: both; background-color: rgba(255,255,255,0.18); border: 1px solid #c6d1dd; padding: 20px; }
+.setupPan label { width: 20%; float: left; height: 50px; display: block; font: 700 13px/50px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; text-transform: uppercase; margin: 0 0 15px; }
+.setupPan input.spInputText { background-color: rgba(255, 255, 255, 0.18); border: 0 none; border-radius: 8px; float: left; color: #1c1c1c; font: 400 14px/50px "Open Sans", Arial, Helvetica, sans-serif; height: 50px; margin: 0 0 10px; padding: 0 10px; width: 60%; margin: 0 0 15px; }
+.setupPan textarea { background-color: rgba(255, 255, 255, 0.18); border: 0 none; border-radius: 8px; float: left; color: #1c1c1c; font: 400 14px/30px "Open Sans", Arial, Helvetica, sans-serif; height: 110px; margin: 0 0 10px; padding: 0 10px; width: 60%; margin: 0 0 15px; }
+.setupPan input.spDoneBtn { display: inline-block; width: 172px; height: 50px; margin: 0 10px; padding: 0; text-decoration: none; background-color: #1c1c1c; color: #fff; text-align: center; font: 400 14px/40px "Open Sans", Arial, Helvetica, sans-serif; border: 5px solid #889aae; border-radius: 30px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -ms-border-radius: 30px; }
+.setupPan input.spDoneBtn:hover { background-color: #fff; color: #1c1c1c; }
+.nLPreviewPan { width: 420px; margin: 0 auto; border: 8px solid #88ccdf; background-color: #fff; }
+.backBtn { display: block; width: 172px; height: 50px; margin: 30px auto; padding: 0; text-decoration: none; background-color: #1c1c1c; color: #fff; text-align: center; font: 400 14px/40px "Open Sans", Arial, Helvetica, sans-serif; border: 5px solid #757983; border-radius: 30px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -ms-border-radius: 30px; }
+.backBtn:hover { background-color: #fff; color: #1c1c1c; }
+.patientLogPan { clear: both; }
+.patientLogPan h3 { font: 400 21px/40px "Open Sans", Arial, Helvetica, sans-serif; color: #1c1c1c; padding: 0 0 10px; }
+.patientLogPan p { font: 400 16px/30px "Open Sans", Arial, Helvetica, sans-serif; color: #fff; padding: 0 0 10px; }
+.patientRecord3Inn { clear: both; background-color: rgba(255,255,255,0.18); border: 1px solid #c6d1dd; padding: 20px; }
+.patientRecord3Inn label { clear: both; color: #1c1c1c; font: 700 13px/30px "Open Sans", Arial, Helvetica, sans-serif; padding: 0 0 15px; text-transform: uppercase; width: 100%; }
+.selectAllBox { clear: both; max-width: 220px; padding: 30px 0; }
+.plImageBlock ul { clear: both; width: 100%; }
+.plImageBlock ul li { float: left; width: auto; padding: 0; margin: 0; border: 0; }
+.plImageBlock ul li img { display: block; float: left; }
+.plImageBlock ul li input { margin: 30px 20px; float: left; }
+.plCalenderBox { clear: both; width: 40%; position: relative; }
+.plCalenderBox input { height: 50px; width: 100%; background-color: rgba(204,204,204,0.5); border: 0; border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; padding: 0 50px 0 10px; font: 400 14px/50px "Open Sans", Arial, Helvetica, sans-serif; }
+.plCalenderBox .calIcon { width: 27px; height: 29px; display: block; position: absolute; right: 8px; top: 10px; background: url(../images/cal-img.jpg) no-repeat 0 0; }
+.nav-toggle { display: none; }
+.tableTitle { display: none; color: #232323; font-size: 16px; font-weight: bold; line-height: 16px; }
+@media only screen and (max-width: 1024px) {
+.mainWrap { padding: 0 20px; }
+.filterDiv .inputFiled.one .intBoxDiv, .filterDiv .inputFiled.two .intBoxDiv,.filterDiv .inputFiled.two .intBoxDiv{
+	width:100%;
+}
+.filterDiv .inputFiled.one .intBoxDiv input{
+	width:100%;
+}
+.filterDiv .inputFiled.three,.filterDiv .inputFiled .intBoxDiv{
+	width:100%;
+}
+.filterDiv .inputFiled.three{
+	margin-top:10px;
+}
+.filterDiv .inputFiled.three .intBox{
+	width:100%;
+}
+.filterDiv .inputFiled.one,.filterDiv .inputFiled.two{
+	width:50%;
+}
+.filterList ul li,.filterList ul li:first-child{
+	margin:0 2% 2%;
+}
+}
+@media only screen and (max-width: 900px) {
+.header { position: relative; }
+.logo { float: none; clear: both; display: block; text-align: center; line-height: normal; padding: 20px 0 0; }
+.heaerRight { text-align: center; clear: both; display: block; float: none; }
+.headerBlock { text-align: center; }
+.navigation ul li { float: none; display: inline-block; vertical-align: top; }
+.cVTopBlockRight,.cVTopBlockMid,.cVTopBlockLeft{
+	width:auto;
+	float:none;
+	clear:both;
+	display:block;
+}
+.exerciseLeft img{
+	width:100%;
+}
+}
+@media only screen and (max-width: 767px) {
+.fbox { clear: both; display: block; width: auto; padding: 0; margin: 0 0 20px 0; float: none; }
+.headerBlock { padding-bottom: 10px; }
+.headerBlock.last { padding: 10px; }
+.nav-toggle { color: #fff; display: inline-block; font-size: 16px; font-weight: 600; line-height: 24px; padding: 0 0 0 30px; position: relative; }
+.nav-collapse { display: none; }
+.nav-collapse.opened { display: block; padding: 10px; background: #333; left: 20px; right: 20px; margin-top: 10px;z-index:9; }
+.js .navigation .nav-collapse-0.opened { max-height: none !important; position: absolute !important; }
+.navigation ul.nav-collapse li { float: none; clear: both; display: block; padding: 0; margin: 0; }
+.navigation ul.nav-collapse li a { border: 0; display: block; padding: 10px; color: #fff; }
+.navigation ul.nav-collapse li:hover a, .navigation ul.nav-collapse li.active a { background: #fe7110; }
+.navigation .nav-toggle.active { color: #fe7110; }
+.navigation .nav-toggle:before { content: ""; width: 24px; height: 24px; background: url(../images/sprite-img.png) no-repeat -59px -615px; margin: 0 6px 0 0; vertical-align: top; position: absolute; left: 0; top: 0; }
+.navigation .nav-toggle.active:before { background-position: -136px -615px; }
+.MembManageRow ul li strong{
+	width:30%;
+}
+.MembManageRow ul li span{
+	width:70%;
+}
+.exercisePanel{
+	clear:both;
+	display:block;
+}
+.exercisePanel .exerciseLeft,.exercisePanel .exerciseRight{
+	clear:both;
+	display:block;
+	float:none;
+	width:auto;
+	padding:0;
+}
+.listBlockTableRow .tableTh{ display: none; }
+.listBlockTableRow{ display: block; clear: both; }
+.listBlockTable .tableTd { display: block; clear: both; display: block; text-align: center; padding: 0 0 10px;float:none; }
+.listBlockTable .percent15,.listBlockTable .percent50,.listBlockTable .percent20 { width: auto; border: 0; }
+.tableTitle { display: block; padding-bottom: 10px; }
+.setUpBtn{float:none;}
+.patientRecordLeft,.patientRecordRight{
+	width:auto;
+	clear:both;
+	display:block;
+	float:none;
+	border:0;
+}
+.patientRecordRight p{
+	text-align:center;
+	padding-bottom:10px;
+}
+.setupPan label{
+	width:30%;
+}
+.setupPan input.spInputText{
+	width:68%;
+}
+.filterDiv .inputFiled.others .intBoxDiv{
+	width:auto;
+	display:block;
+	clear:both;
+}
+.filterDiv .inputFiled.textarepan .intBoxDiv .txtBox{
+	width:100%;
+}
+}
+@media only screen and (max-width: 599px) {
+.titleBox .blockTitle span:before, .titleBox .blockTitle span:after{
+	display:none;
+}
+.nLPreviewPan{
+	width:auto;
+}
+.aboutPan .aboutImg{
+	clear:both;
+	display:block;
+	position:relative;
+	margin:0 auto;
+}
+.aboutPan .aboutContent{
+	padding:10px 0;
+}
+.nextExp{
+	text-align:center;
+}
+.plCalenderBox{
+	width:100%;
+}
+.plImageBlock ul li{
+	clear:both;
+	display:block;
+	float:none;
+}
+.plImageBlock ul li img{
+	display:block;
+	clear:both;
+	margin:0 auto;
+	float:none;
+}
+.plImageBlock ul li input{
+	clear:both;
+	display:block;
+	margin:10px auto;
+	float:none;
+}
+.filterDiv .inputFiled.one, .filterDiv .inputFiled.two{
+	width:auto;
+	clear:both;
+	float:none;
+	display:block;
+}
+.filterDiv .inputFiled.one .intBoxDiv, .filterDiv .inputFiled.two .intBoxDiv, .filterDiv .inputFiled.two .intBoxDiv{
+	padding:0;
+}
+.filterDiv .inputFiled .or{
+	position:static;
+	display:block;
+	text-align:center;
+	margin:0 auto;
+}
+}
+@media only screen and (max-width: 479px) {
+.patientLogout,.orangeBtn{
+	float:none;
+	display:block;
+	width:100%;
+	margin-bottom:10px;
+}
+.MembManageRow ul li strong{
+	width:auto;
+	clear:both;
+	display:block;
+	float:none;
+}
+.MembManageRow ul li span{
+	width:auto;
+	clear:both;
+	display:block;
+	float:none;
+}
+
+.listDiv{
+	padding:10px;
+	line-height:normal;
+}
+.setupPan label{
+	width:auto;
+	clear:both;
+	display:block;
+	height:auto;
+	float:none;
+	line-height:normal;
+}
+.setupPan input.spInputText,.setupPan textarea{
+	width:100%;
+	clear:both;
+	display:block;
+	float:none;
+}
+.setupPan .spacer{
+	display:none;
+}
+
+}
